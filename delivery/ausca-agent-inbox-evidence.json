@@ -43,25 +43,31 @@
     {
       "step": "discover",
       "duration_ms": 300,
-      "result": "Fetched the Agent Inbox skill and OpenAPI description; the catalog exposed offer inbox.receive and the exact revision and schema bindings recorded above."
+      "result": "Fetched https://ausca.com/skills/agent-inbox/SKILL.md and https://ausca.com/openapi.yaml; the catalog exposed offer inbox.receive and the exact bindings above, but it lacked a runnable fallback for a local runx installation with no receipt signer or hosted provider grant."
     },
     {
       "step": "unsigned_request",
       "duration_ms": 624,
-      "result": "POST /v1/open-inbox without PAYMENT-SIGNATURE returned HTTP 402 with x402 v2, amount 50000 USDC atomic units, Base network eip155:8453, and the settlement address."
+      "result": "POST /v1/open-inbox without PAYMENT-SIGNATURE returned HTTP 402 with x402 v2, amount 50000 atomic USDC units, network eip155:8453, and payTo 0x26572ff23c6c52bfb1a69cb0c9114a8be443b422."
     },
     {
-      "step": "payment_and_invocation",
+      "step": "payment",
       "started_at": "2026-09-17T11:05:29.334Z",
       "completed_at": "2026-09-17T11:05:38.862Z",
       "duration_ms": 9527,
-      "result": "The signed retry settled 0.05 USDC and returned HTTP 200 with invocation paid_c9aa98d1-1929-493d-af61-5f1d0ac78a6e in succeeded state."
+      "result": "Payer 0x168aBEA059DE879F44d09E5c33E2BC6318b2ff94 settled 0.05 USDC in Base transaction 0xe4c5df45f3a8b23436ba0775102932616a09b3c3923403d156858c341cf17827."
     },
     {
-      "step": "lease_creation",
+      "step": "invocation",
       "completed_at": "2026-09-17T11:05:32.679Z",
       "duration_ms": 3345,
-      "result": "The response created a one-hour inbox lease. The capability was stored separately with mode 0600 and was never included in public evidence."
+      "result": "The signed POST returned HTTP 200 JSON with status=accepted, invocation object, inspect_url, and resource_access. Invocation paid_c9aa98d1-1929-493d-af61-5f1d0ac78a6e was already succeeded and created a one-hour inbox lease."
+    },
+    {
+      "step": "wait",
+      "duration_ms": 0,
+      "poll_count": 0,
+      "result": "Not applicable: inbox.receive completed synchronously in the signed HTTP 200 response, so no invocation polling was required."
     },
     {
       "step": "send_and_ingress",
@@ -81,9 +87,9 @@
       "result": "GET /messages/{message_id} returned the normalized body. The subject and verification ID gofrantic-135-20260917 matched the sent message."
     },
     {
-      "step": "validate_result",
+      "step": "result",
       "duration_ms": 1,
-      "result": "Validated offer/revision/schema bindings, invocation state succeeded, output digest, recipient, subject, nonce, and attachment count. No untrusted HTML was rendered."
+      "result": "Retrieved the result through the lease access and validated offer/revision/schema bindings, invocation state succeeded, output digest, recipient, subject, nonce, and attachment count. No untrusted HTML was rendered."
     },
     {
       "step": "receipt_review",
@@ -95,6 +101,13 @@
       "completed_at": "2026-09-17T11:15:38.720Z",
       "duration_ms": 25400,
       "result": "DELETE /v1/agent-inboxes/{inbox_id} returned deleted; a subsequent status read independently confirmed state=deleted and the same deleted_at timestamp."
+    },
+    {
+      "step": "total_elapsed",
+      "started_at": "2026-09-17T11:05:29.334Z",
+      "completed_at": "2026-09-17T11:15:38.720Z",
+      "duration_ms": 609386,
+      "result": "Total elapsed from the paid request start through independently verified deletion was 10 minutes 9.386 seconds, including the operator's manual email send."
     }
   ],
   "issues": [
