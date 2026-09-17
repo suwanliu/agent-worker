@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "artifact_type": "public_support_action_evidence",
+  "publication_status": "published_in_public_repository",
+  "public_url": "https://github.com/suwanliu/agent-worker/blob/main/delivery/runx-love-public-action.md",
+  "platform": "GitHub public repository",
+  "runx_links_found": [
+    "https://runx.ai/",
+    "https://github.com/runxhq/runx"
+  ],
+  "observations": [
+    {
+      "claim_type": "original_public_support_action",
+      "public_url": "https://github.com/suwanliu/agent-worker/blob/main/delivery/runx-love-public-action.md",
+      "runx_link_found": true,
+      "summary": "An original technical note explains why portable skills and governed execution matter for agent tooling, identifies runx in that problem space, and gives readers concrete questions for evaluating or contributing to it.",
+      "audience": "Agent-tooling developers, maintainers, and future contributors interested in portable skills and governed execution.",
+      "why_action_is_allowed_in_venue": "The note is published in a public repository owned by the publisher, in a relevant technical documentation path. It is an original, reader-oriented project mention and does not rely on reciprocal promotion, spam, or a venue that forbids project sharing.",
+      "evidence_scope": "The public URL identifies the committed support note and its official runx links. The evidence and report URLs identify the corresponding structured records."
+    }
+  ]
+}
