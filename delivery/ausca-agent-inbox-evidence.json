@@ -1,0 +1,115 @@
+{
+  "schema": "gofrantic.evidence.v1",
+  "bounty_id": "135",
+  "claim_id": "8da7cda3-1fe9-42f4-8381-178be3d04056",
+  "offer_id": "inbox.receive",
+  "summary": "A live Ausca Agent Inbox lease was discovered, challenged over x402, paid with 0.05 USDC on Base, used to receive and read a real verification email, validated against the expected subject and nonce, and explicitly deleted. The observations below contain measured timings and identifiers while excluding lease capabilities and the sender's private address.",
+  "bindings": {
+    "offer_revision": "receive-duration-r2",
+    "offer_revision_digest": "sha256:0de2e006db131b0f1dbc9e533d7c8068b5185d8185b614a632f308d1d29beff4",
+    "input_schema_digest": "sha256:5cb8698aefc78e67b2e37f1cea6849af1e2f17dfa14d2d6d85d0391383a9cdb1",
+    "output_schema_digest": "sha256:01877423c3ee9db3adda95e24a07be35cee1731aa9c9a70b100513b1157575ff",
+    "canonicalizer_version": "runx.receipt.c14n.v1",
+    "idempotency_key": "ajp-gofrantic-135-inbox-receive-v1"
+  },
+  "receipt": {
+    "public_url": "https://runx.ai/r/38ed133b4da18f4d940e911b58598343773cda0579898639cf9cf6ee2d73f146",
+    "receipt_uri": "runx:receipt:sha256:38ed133b4da18f4d940e911b58598343773cda0579898639cf9cf6ee2d73f146",
+    "invocation_id": "paid_c9aa98d1-1929-493d-af61-5f1d0ac78a6e",
+    "output_digest": "sha256:b1d79562ee8455d7795cfdfe3f71d884d4ad9696752516f266ddcc8a6ab1ddb1"
+  },
+  "payment": {
+    "amount_usd": "0.05",
+    "asset": "USDC",
+    "network": "eip155:8453",
+    "transaction": "0xe4c5df45f3a8b23436ba0775102932616a09b3c3923403d156858c341cf17827"
+  },
+  "resource": {
+    "inbox_id": "inb_e0858a3d32202892870d66271874bf7c44a91c10",
+    "created_at": "2026-09-17T11:05:32.679Z",
+    "expires_at": "2026-09-17T12:05:32.679Z",
+    "deleted_at": "2026-09-17T11:15:38.720Z",
+    "final_state": "deleted"
+  },
+  "message": {
+    "message_id": "msg_8Z6h19W-rHMYmrUzQ0PVEmzBWSR7IZhoJUF0dLmbQW8",
+    "sender": "redacted controlled account at qq.com",
+    "subject": "AJP #135 Ausca Agent Inbox Verification",
+    "verification_id": "gofrantic-135-20260917",
+    "received_at": "2026-09-17T11:14:07.730Z",
+    "attachment_count": 0
+  },
+  "observations": [
+    {
+      "step": "discover",
+      "duration_ms": 300,
+      "result": "Fetched the Agent Inbox skill and OpenAPI description; the catalog exposed offer inbox.receive and the exact revision and schema bindings recorded above."
+    },
+    {
+      "step": "unsigned_request",
+      "duration_ms": 624,
+      "result": "POST /v1/open-inbox without PAYMENT-SIGNATURE returned HTTP 402 with x402 v2, amount 50000 USDC atomic units, Base network eip155:8453, and the settlement address."
+    },
+    {
+      "step": "payment_and_invocation",
+      "started_at": "2026-09-17T11:05:29.334Z",
+      "completed_at": "2026-09-17T11:05:38.862Z",
+      "duration_ms": 9527,
+      "result": "The signed retry settled 0.05 USDC and returned HTTP 200 with invocation paid_c9aa98d1-1929-493d-af61-5f1d0ac78a6e in succeeded state."
+    },
+    {
+      "step": "lease_creation",
+      "completed_at": "2026-09-17T11:05:32.679Z",
+      "duration_ms": 3345,
+      "result": "The response created a one-hour inbox lease. The capability was stored separately with mode 0600 and was never included in public evidence."
+    },
+    {
+      "step": "send_and_ingress",
+      "started_at": "2026-09-17T11:05:32.679Z",
+      "completed_at": "2026-09-17T11:14:07.730Z",
+      "duration_ms": 515051,
+      "result": "A real email was manually sent from an account controlled by the operator and Ausca recorded it under the message identifier above. This elapsed time includes the human send step."
+    },
+    {
+      "step": "list_messages",
+      "duration_ms": 22400,
+      "result": "GET /messages?wait_seconds=30 returned one normalized summary with the expected subject, recipient, ingress timestamp, and zero attachments."
+    },
+    {
+      "step": "read_message",
+      "duration_ms": 1600,
+      "result": "GET /messages/{message_id} returned the normalized body. The subject and verification ID gofrantic-135-20260917 matched the sent message."
+    },
+    {
+      "step": "validate_result",
+      "duration_ms": 1,
+      "result": "Validated offer/revision/schema bindings, invocation state succeeded, output digest, recipient, subject, nonce, and attachment count. No untrusted HTML was rendered."
+    },
+    {
+      "step": "receipt_review",
+      "duration_ms": 500,
+      "result": "The public RunX page identified Ausca and successful Agent Inbox completion, but its visible summary did not expose the settled amount or full binding details."
+    },
+    {
+      "step": "delete_and_verify",
+      "completed_at": "2026-09-17T11:15:38.720Z",
+      "duration_ms": 25400,
+      "result": "DELETE /v1/agent-inboxes/{inbox_id} returned deleted; a subsequent status read independently confirmed state=deleted and the same deleted_at timestamp."
+    }
+  ],
+  "issues": [
+    {
+      "step": "payment",
+      "issue": "The documented runx x402-pay path could not execute locally because runx-cli 0.6.15 had neither a receipt signer nor a hosted provider grant. The official Coinbase x402 client completed the same challenge successfully, but the skill did not provide a fallback decision tree for this state."
+    },
+    {
+      "step": "client_runtime",
+      "issue": "The Node x402 client initially failed before signing because globalThis.crypto was unavailable in the runtime. Wiring node:crypto webcrypto fixed it, but the package error did not identify that remediation."
+    },
+    {
+      "step": "receipt_review",
+      "issue": "The public receipt page showed Ausca and completion but did not visibly show the 0.05 USD settlement or the exact offer revision and schema digests required by this bounty's review gate."
+    }
+  ],
+  "proposed_change": "Add an executable Node example to the Agent Inbox skill that initializes node:crypto webcrypto, handles the unsigned 402 and signed retry, and prints a redacted verification checklist containing payment amount, offer bindings, invocation ID, output digest, and receipt URL."
+}
