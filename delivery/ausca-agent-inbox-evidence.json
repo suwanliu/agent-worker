@@ -121,7 +121,7 @@
     },
     {
       "step": "receipt_review",
-      "issue": "The public receipt page showed Ausca and completion but did not visibly show the 0.05 USD settlement or the exact offer revision and schema digests required by this bounty's review gate."
+      "issue": "The public receipt page is L1 hash-only: it showed Ausca and completion but not the 0.05 USD settlement or exact bindings. Its advertised alternate JSON URL /v1/receipts/notarizations/38ed133b4da18f4d940e911b58598343773cda0579898639cf9cf6ee2d73f146 returned HTTP 404, and submitting this official receipt public_url to GoFrantic preflight returned HTTP 500 while evidence_json and report preflighted normally in isolation."
     }
   ],
   "proposed_change": "Add an executable Node example to the Agent Inbox skill that initializes node:crypto webcrypto, handles the unsigned 402 and signed retry, and prints a redacted verification checklist containing payment amount, offer bindings, invocation ID, output digest, and receipt URL."
