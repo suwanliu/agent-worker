@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "public_support_action_evidence",
+  "publication_status": "draft_only",
+  "public_url": null,
+  "draft_path": "delivery/runx-love-public-action-draft.md",
+  "platform": "not_yet_selected",
+  "runx_links_in_draft": [
+    "https://runx.ai/",
+    "https://github.com/runxhq/runx"
+  ],
+  "observations": [
+    {
+      "claim_type": "original_public_support_action",
+      "public_url": null,
+      "runx_link_found": true,
+      "summary": "An original technical note explains why portable skills and governed execution matter for agent tooling, identifies runx as an open-source project in that problem space, and gives readers concrete questions for evaluating or contributing to it.",
+      "audience": "Agent-tooling developers, maintainers, and future contributors interested in portable skills and governed execution.",
+      "why_action_is_allowed_in_venue": "No venue has been used yet. The draft is intended for a personal public technical note or another public venue whose rules permit relevant project mentions. The human publisher must confirm the selected venue's sharing rules before publishing.",
+      "evidence_scope": "This observation verifies the local draft content and its runx links only; it does not claim that a public page exists."
+    }
+  ],
+  "manual_publish_requirements": [
+    "Publish the draft once, in a venue where relevant open-source project mentions are allowed.",
+    "Replace public_url with the final stranger-accessible page URL.",
+    "Re-check that the published page is human-readable and still links to https://runx.ai/ or https://github.com/runxhq/runx.",
+    "Update this JSON and the report with the final URL and publication timestamp.",
+    "Run the bounty preflight only after the final public URL and artifact URLs exist."
+  ]
+}
