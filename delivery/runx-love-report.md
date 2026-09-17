@@ -16,6 +16,13 @@ The public action is an original technical note about why portable skills and go
 
 The note is specific and reader-oriented. It offers a practical evaluation and contribution path instead of repeating a slogan or posting a bare link. It avoids unverified product claims, reciprocal-promotion requests, and screenshot-only proof.
 
+## Verification checklist
+
+- The public action is a human-readable Markdown page on the public `agent-worker` repository.
+- The page links to both `https://runx.ai/` and `https://github.com/runxhq/runx`.
+- The evidence JSON contains four observations with the required claim, URL, audience, and venue fields.
+- The evidence and report URLs are stable `main`-branch blob URLs reachable by a stranger.
+
 ## Provenance
 
 The change was proposed and reviewed in the public GitHub Pull Request for this repository. The final URLs above are stable GitHub blob URLs on `main`, so a stranger can load the action, evidence, and report without relying on a local workspace.

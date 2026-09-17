@@ -15,3 +15,5 @@ For people building agent tools, three useful questions are:
 3. Are execution boundaries and repeatability treated as part of the tool rather than left to ad-hoc wrapper scripts?
 
 Those are the reasons [runx is worth a look](https://github.com/runxhq/runx). This is a concrete open-source project reference for people working on agent tooling, not a claim that it has solved every portability or governance problem. A useful next step for a reader or future contributor is to compare its workflow with an existing agent setup, then document one environment mismatch, policy edge case, or onboarding improvement.
+
+The note is meant to make that first comparison easier: start with one small skill, record what changes between two environments, and turn the observation into a focused documentation or issue suggestion.
