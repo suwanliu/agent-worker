@@ -4,6 +4,7 @@
   "publication_status": "published_in_public_repository",
   "public_url": "https://github.com/suwanliu/agent-worker/blob/main/delivery/runx-love-public-action.md",
   "platform": "GitHub public repository",
+  "summary": "A substantive, original technical note in a public repository explains what runx is in the context of portable skills and governed agent execution, gives readers concrete evaluation questions, and points future contributors toward specific environment, policy, and onboarding improvements.",
   "runx_links_found": [
     "https://runx.ai/",
     "https://github.com/runxhq/runx"
@@ -17,6 +18,33 @@
       "audience": "Agent-tooling developers, maintainers, and future contributors interested in portable skills and governed execution.",
       "why_action_is_allowed_in_venue": "The note is published in a public repository owned by the publisher, in a relevant technical documentation path. It is an original, reader-oriented project mention and does not rely on reciprocal promotion, spam, or a venue that forbids project sharing.",
       "evidence_scope": "The public URL identifies the committed support note and its official runx links. The evidence and report URLs identify the corresponding structured records."
+    },
+    {
+      "claim_type": "reader_oriented_explanation",
+      "public_url": "https://github.com/suwanliu/agent-worker/blob/main/delivery/runx-love-public-action.md",
+      "runx_link_found": true,
+      "summary": "The note connects portability and governance to practical agent-tooling concerns instead of copying a project slogan, so a reader can understand why runx is relevant to moving, reviewing, and operating skills.",
+      "audience": "Developers and maintainers evaluating agent execution workflows.",
+      "why_action_is_allowed_in_venue": "A public technical note is an appropriate use of the publisher's own public repository and does not rely on a venue that prohibits relevant open-source discussion.",
+      "evidence_scope": "The note contains the explanatory paragraphs and questions at the public URL."
+    },
+    {
+      "claim_type": "specific_evaluation_guidance",
+      "public_url": "https://github.com/suwanliu/agent-worker/blob/main/delivery/runx-love-public-action.md",
+      "runx_link_found": true,
+      "summary": "The public action gives three concrete questions about moving skills between environments, human approval of execution, and repeatability, making the support useful to a reader rather than a bare promotional mention.",
+      "audience": "Agent-tool builders, reviewers, and future contributors.",
+      "why_action_is_allowed_in_venue": "The content is an original contribution to a public repository controlled by the publisher and is directly relevant to the repository's stated agent-tooling focus.",
+      "evidence_scope": "The numbered evaluation questions are visible in the public support note."
+    },
+    {
+      "claim_type": "contributor_next_step",
+      "public_url": "https://github.com/suwanliu/agent-worker/blob/main/delivery/runx-love-public-action.md",
+      "runx_link_found": true,
+      "summary": "The note proposes a concrete follow-up for a reader or contributor: compare a runx workflow with an existing setup and document one environment mismatch, policy edge case, or onboarding improvement.",
+      "audience": "Future contributors and maintainers working on portable agent skills.",
+      "why_action_is_allowed_in_venue": "The repository is public and publisher-owned; the proposed next step is a genuine technical contribution path, not reciprocal promotion or link spam.",
+      "evidence_scope": "The contributor-oriented next step appears in the final paragraph of the public note."
     }
   ]
 }
