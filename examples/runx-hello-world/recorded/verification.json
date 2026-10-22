@@ -1,0 +1,13 @@
+{
+  "receipt_dir": "/home/ubuntu/.artifacts/runx-walkthrough-20261022/receipts",
+  "trees": [
+    {
+      "root_receipt_id": "sha256:53744aaf71d93ed5f88d897a97dab96dfc82a8713ef625046b7f25905b067acf",
+      "receipt_count": 2,
+      "valid": true,
+      "findings": []
+    }
+  ],
+  "unreadable_files": [],
+  "valid": true
+}

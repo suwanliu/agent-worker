@@ -2,49 +2,54 @@
   "schema_version": 1,
   "artifact_type": "public_support_action_evidence",
   "publication_status": "published_in_public_repository",
-  "public_url": "https://github.com/suwanliu/agent-worker/blob/main/delivery/runx-love-public-action.md",
-  "platform": "GitHub public repository",
-  "summary": "A substantive, original technical note in a public repository explains what runx is in the context of portable skills and governed agent execution, gives readers concrete evaluation questions, and points future contributors toward specific environment, policy, and onboarding improvements.",
-  "runx_links_found": [
-    "https://runx.ai/",
-    "https://github.com/runxhq/runx"
-  ],
+  "public_url": "https://github.com/suwanliu/agent-worker",
+  "source_url": "https://github.com/suwanliu/agent-worker/blob/main/docs/runx-local-receipts.md",
+  "summary": "Original, tested runx walkthrough discoverable from the repository README, with runnable attributed source, an actual sealed execution, two signed receipts, and independent public-key verification.",
   "observations": [
     {
-      "claim_type": "original_public_support_action",
-      "public_url": "https://github.com/suwanliu/agent-worker/blob/main/delivery/runx-love-public-action.md",
+      "public_url": "https://github.com/suwanliu/agent-worker",
       "runx_link_found": true,
-      "summary": "An original technical note explains why portable skills and governed execution matter for agent tooling, identifies runx in that problem space, and gives readers concrete questions for evaluating or contributing to it.",
-      "audience": "Agent-tooling developers, maintainers, and future contributors interested in portable skills and governed execution.",
-      "why_action_is_allowed_in_venue": "The note is published in a public repository owned by the publisher, in a relevant technical documentation path. It is an original, reader-oriented project mention and does not rely on reciprocal promotion, spam, or a venue that forbids project sharing.",
-      "evidence_scope": "The public URL identifies the committed support note and its official runx links. The evidence and report URLs identify the corresponding structured records."
+      "audience": "Developers evaluating executable agent-tooling examples and local receipt verification; the repository root README links directly to the walkthrough and runnable source.",
+      "why_action_is_allowed_in_venue": "Publisher-owned public agent-tooling repository; a relevant executable example and original walkthrough are explicitly permitted by the repository owner. No external-community posting, audience-size claim, or reciprocal promotion.",
+      "claim_type": "executable_readme_entry",
+      "summary": "The root README now features runx 0.10.2, links the walkthrough and runnable example, and names the real sealed result and successful receipt verification."
     },
     {
-      "claim_type": "reader_oriented_explanation",
-      "public_url": "https://github.com/suwanliu/agent-worker/blob/main/delivery/runx-love-public-action.md",
+      "public_url": "https://github.com/suwanliu/agent-worker",
       "runx_link_found": true,
-      "summary": "The note connects portability and governance to practical agent-tooling concerns instead of copying a project slogan, so a reader can understand why runx is relevant to moving, reviewing, and operating skills.",
-      "audience": "Developers and maintainers evaluating agent execution workflows.",
-      "why_action_is_allowed_in_venue": "A public technical note is an appropriate use of the publisher's own public repository and does not rely on a venue that prohibits relevant open-source discussion.",
-      "evidence_scope": "The note contains the explanatory paragraphs and questions at the public URL."
+      "audience": "Developers evaluating executable agent-tooling examples and local receipt verification; the repository root README links directly to the walkthrough and runnable source.",
+      "why_action_is_allowed_in_venue": "Publisher-owned public agent-tooling repository; a relevant executable example and original walkthrough are explicitly permitted by the repository owner. No external-community posting, audience-size claim, or reciprocal promotion.",
+      "claim_type": "real_skill_execution",
+      "summary": "Executed the pinned upstream hello-world source with runx 0.10.2 and Node 22.23.3. The actual result was sealed/completed, with the exact supplied message and a closed root receipt."
     },
     {
-      "claim_type": "specific_evaluation_guidance",
-      "public_url": "https://github.com/suwanliu/agent-worker/blob/main/delivery/runx-love-public-action.md",
+      "public_url": "https://github.com/suwanliu/agent-worker",
       "runx_link_found": true,
-      "summary": "The public action gives three concrete questions about moving skills between environments, human approval of execution, and repeatability, making the support useful to a reader rather than a bare promotional mention.",
-      "audience": "Agent-tool builders, reviewers, and future contributors.",
-      "why_action_is_allowed_in_venue": "The content is an original contribution to a public repository controlled by the publisher and is directly relevant to the repository's stated agent-tooling focus.",
-      "evidence_scope": "The numbered evaluation questions are visible in the public support note."
+      "audience": "Developers evaluating executable agent-tooling examples and local receipt verification; the repository root README links directly to the walkthrough and runnable source.",
+      "why_action_is_allowed_in_venue": "Publisher-owned public agent-tooling repository; a relevant executable example and original walkthrough are explicitly permitted by the repository owner. No external-community posting, audience-size claim, or reciprocal promotion.",
+      "claim_type": "independent_public_key_verification",
+      "summary": "Two original signed receipt files and only the public key are checked in. Verification from a separate runx home using explicit public-key trust returned valid=true, receipt_count=2, findings=[]."
     },
     {
-      "claim_type": "contributor_next_step",
-      "public_url": "https://github.com/suwanliu/agent-worker/blob/main/delivery/runx-love-public-action.md",
+      "public_url": "https://github.com/suwanliu/agent-worker",
       "runx_link_found": true,
-      "summary": "The note proposes a concrete follow-up for a reader or contributor: compare a runx workflow with an existing setup and document one environment mismatch, policy edge case, or onboarding improvement.",
-      "audience": "Future contributors and maintainers working on portable agent skills.",
-      "why_action_is_allowed_in_venue": "The repository is public and publisher-owned; the proposed next step is a genuine technical contribution path, not reciprocal promotion or link spam.",
-      "evidence_scope": "The contributor-oriented next step appears in the final paragraph of the public note."
+      "audience": "Developers evaluating executable agent-tooling examples and local receipt verification; the repository root README links directly to the walkthrough and runnable source.",
+      "why_action_is_allowed_in_venue": "Publisher-owned public agent-tooling repository; a relevant executable example and original walkthrough are explicitly permitted by the repository owner. No external-community posting, audience-size claim, or reciprocal promotion.",
+      "claim_type": "specific_boundary_and_provenance",
+      "summary": "Walkthrough explains RUNX_INPUT_MESSAGE, the string output contract, trusted_host_process, local issuer trust and the absence of hosted notarization. It attributes upstream source at a pinned commit and includes Apache-2.0."
     }
-  ]
+  ],
+  "execution": {
+    "date": "2026-10-22",
+    "runx_version": "0.10.2",
+    "node_version": "22.23.3",
+    "run_id": "walkthrough-verified-20261022",
+    "receipt_id": "sha256:53744aaf71d93ed5f88d897a97dab96dfc82a8713ef625046b7f25905b067acf",
+    "status": "sealed",
+    "outcome": "completed",
+    "message": "Hello from an agent-worker example.",
+    "verification_valid": true,
+    "receipt_count": 2,
+    "source_commit": "bb0f6856d55aedaa1509bd7c5c8cb1e566cbee20"
+  }
 }

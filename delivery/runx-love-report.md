@@ -1,28 +1,8 @@
-# runx support action report
+# Tested runx walkthrough: publication report
 
-## Delivery status
-
-The support action is published in the public `suwanliu/agent-worker` repository.
-
-- Public action: https://github.com/suwanliu/agent-worker/blob/main/delivery/runx-love-public-action.md
-- Structured evidence: https://github.com/suwanliu/agent-worker/blob/main/delivery/runx-love-evidence.json
-- This report: https://github.com/suwanliu/agent-worker/blob/main/delivery/runx-love-report.md
-
-## What was published
-
-The public action is an original technical note about why portable skills and governed execution matter to agent-tooling developers, maintainers, and future contributors. It identifies runx as an open-source project in that problem space, links to both `https://runx.ai/` and the official repository, and gives readers three concrete questions for evaluating the workflow or identifying a useful contribution.
-
-## Why this is authentic support
-
-The note is specific and reader-oriented. It offers a practical evaluation and contribution path instead of repeating a slogan or posting a bare link. It avoids unverified product claims, reciprocal-promotion requests, and screenshot-only proof.
-
-## Verification checklist
-
-- The public action is a human-readable Markdown page on the public `agent-worker` repository.
-- The page links to both `https://runx.ai/` and `https://github.com/runxhq/runx`.
-- The evidence JSON contains four observations with the required claim, URL, audience, and venue fields.
-- The evidence and report URLs are stable `main`-branch blob URLs reachable by a stranger.
-
-## Provenance
-
-The change was proposed and reviewed in the public GitHub Pull Request for this repository. The final URLs above are stable GitHub blob URLs on `main`, so a stranger can load the action, evidence, and report without relying on a local workspace.
+- Public reader entry: https://github.com/suwanliu/agent-worker. The root README prominently links to the walkthrough and executable example, rather than asking readers to find a support note in a delivery directory.
+- Original walkthrough: https://github.com/suwanliu/agent-worker/blob/main/docs/runx-local-receipts.md. It gives commands, actual selected output, a receipt id, independent verification instructions, and the precise local process/signing boundary. Upstream example code is attributed to a pinned commit and distributed with its Apache-2.0 license; no authorship of that code is claimed.
+- Real execution: runx CLI 0.10.2, Node v22.23.3, Linux arm64, 2026-10-22. The skill echoed the supplied message and returned sealed/completed. Two signed receipt files, a result projection, and only the public key are published under examples/runx-hello-world/recorded.
+- Validation: the original local verification and a second verification from a different runx home both returned valid=true for the two-receipt tree, with no findings. The source script only reads the supplied message and writes JSON; the walkthrough identifies trusted_host_process and does not claim hosted notarization or a sandbox guarantee.
+- Audience and venue: this is a public, publisher-owned repository about agent tooling. Its README and runnable examples are relevant to developers evaluating this workflow; no existing traffic or community reach is asserted. The content is a concrete reusable walkthrough, with official runx links, not a reciprocal promotion or an external-community post.
+- Revision addresses both review concerns: replaces abstract evaluation questions with actual commands/run/receipts, and moves the reader entry and walkthrough out of the delivery directory. Evidence and this report remain ancillary delivery records.

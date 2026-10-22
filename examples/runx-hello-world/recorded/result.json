@@ -1,0 +1,13 @@
+{
+  "schema": "runx.skill_run.v1",
+  "status": "sealed",
+  "run_id": "walkthrough-verified-20261022",
+  "outcome": "completed",
+  "result": {
+    "message": "Hello from an agent-worker example."
+  },
+  "closure": {
+    "disposition": "closed"
+  },
+  "receipt_id": "sha256:53744aaf71d93ed5f88d897a97dab96dfc82a8713ef625046b7f25905b067acf"
+}
